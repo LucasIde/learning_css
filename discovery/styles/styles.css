@@ -1,0 +1,104 @@
+/* ordre d'application toujour au plus proche du code "in line" > "header" > "fichier css"*/
+/* body {
+    margin: 0;
+} */
+/* nom | selecteur = h1 \ouvrir avec {} | {...} = ensemble de règle | couple = color: rgb(156, 19, 19); \toujours séparer par : et fini par ; */
+/* h1 {
+    color: black;
+    background-color: red;
+} */
+
+
+
+
+
+/* 1) "*"= selecteur universel */
+/* * {
+    color: red;
+} */
+
+/* 2)  selecteur de balise/type  (toutes les balises) (pas vraiment le head)*/
+/* p {
+    background-color: orangered;
+} */
+
+/* 3) selecteur d'atribut [attribut="valeur]"*/
+/* cas spécifique ^ (ex for^="s") prend les élement commencent par s */
+/* $ (ex for$="s") prend les élement finissant par s */
+/* $ (ex for*="bb") contenant bb */
+/* [href=""], [href="0"]{
+    color: orangered;
+}
+[type="text"] {
+    padding: 10px;
+} */
+
+/* 4) selecteur descendant "espace entre nav et a" lien de parenté chercher les a dans nav*/
+/* nav a {
+    color: orangered;
+} */
+
+/* 5) selecteur adjacent direct "+" */
+/* check si li précedent existe donc premeir non compris (généralement dernier prio) */
+/* li + li {
+    color: red;
+}
+h2 + p {
+    color: red;
+} */
+
+/* 6) selecteur d'enfant direct ">" */
+/* section > a {
+    color: violet;
+}
+section > * {
+    color: orangered;
+} */
+
+/* 7) selecteur d'ID "#"*/
+/* #main-menu {
+    background-color: orangered;
+} */
+
+/* 8) selecteur de class "." */
+/* .bold {
+    font-weight: bold;
+}
+.italique {
+    font-style: italic;
+} */
+
+
+
+
+/* :: rentre spec balise */
+/* section p::first-letter {
+    font-size: 30px;
+} */
+
+/* hover permet de modif ce qui est survolé mais moins populaire du au mobile */
+/* p {
+    transition: 1s all ease-in-out;
+}
+p:hover {
+    font-size: 30px;
+} */
+
+/* utile pour (') (") ou élément de style par exemple*/
+/* div::before {
+    content:"before div"
+}
+div::after {
+    content:"after div"
+} */
+
+/* li:first-child {
+    color: orangered;
+}
+li:last-child {
+    color: orangered;
+} */
+/* choisir l'élément even|odd|2|n va de 0 a l'infinie permet de faire 3n -> 3 * n = occurence de tout les 3 permet aussi + pour n + 4 = n commence au 4*/
+li:nth-of-type(3n) {
+    color: orangered;
+}
