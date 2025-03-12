@@ -1,0 +1,25 @@
+body {
+    background-color: crimson;
+}
+
+main{
+
+    width: 1000px;
+    margin: 0 auto;
+    padding: 100px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+section {
+    width: 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+aside {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4px;
+}

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    width: 500px;
+    height: 100px;
+    /* padding: 100px; */
+    background-color: orangered;
+    margin: 100px auto;
+    position: relative;
+    /* relative moins destructeur */
+}
+
+.wrapper > *{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+ }
+.boite {
+    background-color: #00ffff99;
+    /* position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* relative bouge en fonction de ca place par défaut et continue a reserver son espace */
+    /* position: relative;
+    top: -20px;
+    left: -20px; */
+    /* s'aligne sur la premiere position des parent qu'il rencontre (différent de static) , si pas position se calle sur le viewport*/
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    z-index: 1;
+}
+.boite2{
+    background-color: #00000099;
+    top: 20px;
+    left: 20px;
+}

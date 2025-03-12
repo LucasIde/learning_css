@@ -99,6 +99,8 @@ li:last-child {
     color: orangered;
 } */
 /* choisir l'élément even|odd|2|n va de 0 a l'infinie permet de faire 3n -> 3 * n = occurence de tout les 3 permet aussi + pour n + 4 = n commence au 4*/
-li:nth-of-type(3n) {
+/* li:nth-of-type(3n) {
     color: orangered;
-}
+} */
+
+/* existe écriture raccourci en css exemple background-image ./; background-position center  background-size: cover en "background: ./ center \ cover"*/

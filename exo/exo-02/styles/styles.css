@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header {
+    height: 100vh;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(167deg, #e2e22255 0%, #00d4ff55 100%);
+}
+
+img{
+    display: block;
+    position: absolute ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
