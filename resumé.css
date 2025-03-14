@@ -1,0 +1,56 @@
+test {
+/* size changer */
+max-width: 100%;
+width: 1200px;
+height: 100%;
+padding: 100px 0 80px;
+
+/* position */
+vertical-align: middle;
+text-align: center; /* inline and inline-block */
+margin: auto; /* block */
+
+/* function position */
+position: fixed/relative/absolute;
+/* top/bottom/left/right: 0; */
+translate: -300% -50%;
+z-index: 2;/* change le nbr d'importance de l'affichage de la position */
+
+/* border */
+border: solid 1px #fff2;
+border-style: solid;
+
+/* color */
+background: #fff;
+color: #FFFFFF;
+
+/* text */
+font-family: "Raleway", sans-serif;
+font-size: 40px;
+line-height: 30px;
+text-decoration: none;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-style: normal; /* change h into normal */
+
+/* random */
+
+/* change display de la balise */
+display: inline-block;
+
+/* permet au pading et au border de correspondre au width max */
+box-sizing: border-box;
+
+/* fait flotter img à coté text */
+/* float: right; */
+
+/* transition lors du hover */
+transition: .3s all ease-in-out;
+overflow:hidden ; /* cache le surplus hors du parent */
+scale: 120%;/* change la taille */
+opacity: 0;
+
+/* VVV after/before need VVV */
+content: '';
+}
