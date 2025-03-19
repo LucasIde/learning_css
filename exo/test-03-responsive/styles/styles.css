@@ -5,8 +5,6 @@
 body{
     margin: 0;
     background: url(../img/back.jpeg) no-repeat center/cover;
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
     height: 100vh;
     overflow: hidden;
 }
@@ -41,36 +39,83 @@ img {
 
 @media screen and (max-width:960px) {
     .main-nav {
-        display: none;
+        position: absolute;
+        left: -50%;
+        top: 50%;
+        translate: -50% -50%;
+        padding: 0;
+        transition: 1s all ease-in-out;
+    }
+    .main-nav a{
+        display: block;
+        margin:40px 0;
+        text-align: center;
+        width: 100%;
     }
     
+    body:hover .main-nav {
+        left: 50%;
+    }
+    
+    
+    body:before {
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(270deg, rgba(0,0,0,0.5) 0%, rgba(255,0,0,0.5) 100%);
+        left: -100%;
+        transition: 1s all ease-in-out;
+    }
+    
+    body:hover:before {
+        left: 0;
+    }
+
     .burger-menu {
         position: absolute;
         top: 20px;
         right: 20px;
         display: block;
-        border: solid 2px #FFF;
+        border: solid 2px salmon;
         width: 40px;
         height: 40px;
         border-radius: 10px;
-        border-color: salmon;
-        transition: 1s all ease-in-out;
+        transition: .5s all ease-in-out;
     }
     
     .burger-menu div {
-        display: block;
-        margin: 5px auto;
-        width: 25px;
+        /* display: block;
+        margin: 5px auto; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 65%;
         border-radius: 2px;
         height: 3px;
         background-color: orangered;
+        transition: .2s all ease-in-out .5s;
     }
 
     .burger-menu div:nth-of-type(1) {
-        margin-top: 25%;
+        top: 30%;
+    }
+
+    .burger-menu div:nth-of-type(3) {
+        top: 70%;
     }
 
     .burger-menu:hover {
         rotate: 1turn;
+        border-color: brown;
+    }
+
+    .burger-menu:hover div{
+        background-color: red;
+    }
+
+    .burger-menu:hover div:nth-of-type(2n+1){
+        width: 45%;
     }
 }

@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: burlywood;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    margin: 50px auto;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* ^^^^ mix des deux ^^^^ */ 
+    flex-flow:row wrap;
+    justify-content: center; /* permet de mouvoir le content en fonction de l'axe choisi */
+    align-items: stretch; /* bouge en fonction de l'autre axe (pas actif) */ /* surtout utiliser sur monoligne */ /* value de base stretch */
+    /* align-content: space-between; positionne le content les une avec les autre min 2 ligne avec flex wrap surtout utiliser sur multiligne */
+   
+    /* row-gap: 10px; */
+    /* column-gap: 10px; */
+    /* ^^^^ mix des deux ^^^^ */ 
+    /* gap: 10px 5px; */
+}
+
+.wrapper div{
+    width: 50px;
+    /* height: 50px; */
+}
+
+.wrapper div:nth-of-type(1) {
+    background-color: pink;
+    align-self: start;
+    flex-grow: 1;/* grandit en comblant l'espace restant*/
+    /* margin-right: auto; */
+     /* possible uniquement grâce à flex ne peut plus utiliser justify pour les écarts margin prend la main */
+}
+
+.wrapper div:nth-of-type(2) {
+    background-color: skyblue;
+    align-self: end;
+}
+
+.wrapper div:nth-of-type(3) {
+    background-color: yellowgreen;
+    order: 0;
+    /* value de base 0 */
+    flex-grow: 2; /*si valeur plus grande prendra plus d'espace*/
+}
+
+.wrapper div:nth-of-type(4) {
+    background-color: purple;
+    flex-grow: 1;
+}
