@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1280px;
+    display: flex;
+    padding: 0 25px;
+    flex-flow:row wrap;
+    justify-content: start;
+    align-content: start;
+    gap: 15px 10px;
+    margin: auto;
+}
+
+.card{
+    width: calc((100% - 30px) / 4);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+h2,.txt, .stars{
+    color: #001E42;
+    padding: 0 8%;
+}
+
+.txt {
+    margin-bottom: 2%;
+}
+
+.num {
+    display: inline-block;
+    margin-left: 1%;
+}
+
+.stars{
+    margin-bottom: 2%;
+}
+
+button{
+    margin-top: auto;
+    /* width: 100%; */ /* enfant flexer align-items est en strech par défaut et rempli donc l'espace tout seul */
+    border: none;
+    color: #FFF;
+    background-color: #001E42;
+    padding: 16px 36px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vignette {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    background-color: #001E42;
+    color: #FFF;
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:1150px){
+
+    .card{
+        width: calc((100% - 20px) / 3);
+    }    
+}
+
+@media screen and (max-width:900px) {
+
+    .card{
+        width: calc((100% - 10px) / 2);
+    }    
+}
+
+@media screen and (max-width:700px) {
+
+    .card{
+        width: 100%;
+    }    
+}
