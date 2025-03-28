@@ -1,0 +1,90 @@
+/* Consignes */
+/*
+1- Créer un contexte de Grid sur .grid-container, comportant 6 colonnes égales ainsi qu'une gouttière de 1rem
+2- Créer des zones nommées :
+  - une zone "big" pour le premier article (3 colonnes, 2 rangées)
+  - une zone "large" pour l'article 5 (3 colonnes)
+  - une zone "last" pour le dernier article (toutes les colonnes)
+  - des emplacements vides pour les articles restants
+3- Placer chaque article dans sa zone nommée
+
+
+BONUS FOOTER :
+Le footer (contenant le lien .read-more) doit toujours se placer en bas de son conteneur article.
+*/
+
+
+
+
+/* Reset */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 1rem;
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+article {
+  padding: 1rem;
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  grid-template-areas: 
+  "big big big . . ."
+  "big big big large large large"
+  "last last last last last last";
+}
+
+article:nth-of-type(1) {
+  background: orange;
+  grid-area: big;
+}
+article:nth-of-type(2) {
+  background: hotpink;
+}
+article:nth-of-type(3) {
+  background: olivedrab;
+}
+article:nth-of-type(4) {
+  background: dodgerblue;
+}
+article:nth-of-type(5) {
+  background: slategray;
+  grid-area: large;
+}
+article:nth-of-type(6) {
+  background: tan;
+  grid-area: last;
+}
+
+.read-more {
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0,0,0,0.2);
+}

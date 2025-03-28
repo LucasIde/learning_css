@@ -28,61 +28,61 @@ h3 {
 
 /* card */
 
-    .big__card {
-        display: flex;
-        flex-flow: column wrap;
-        gap: .5rem;
-        margin: 48px 0;
-    }
+.big__card {
+    display: flex;
+    flex-flow: column wrap;
+    gap: .5rem;
+    margin: 48px 0;
+}
 
-    .card{
-        position: relative;
-    }
-    
-    /* img */
-    
-    .card img {
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
-    }
+.card{
+    position: relative;
+}
+
+/* img */
+
+.card img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
 
 /* txt */
 
-    .txt {
-        position: absolute;
-    }
-    
-    .txt__left {
-        left: 20px;
-        bottom: 20px;
-    }
+.txt {
+    position: absolute;
+}
 
-    .txt__right {
-        right: 20px;
-        bottom: 20px;
-    }
+.txt__left {
+    left: 20px;
+    bottom: 20px;
+}
 
-    .btn {
-        font-weight: bold;
-        text-decoration: none;
-        padding: .6rem 1rem;
-        border-radius: 20px;
-    }
+.txt__right {
+    right: 20px;
+    bottom: 20px;
+}
 
-    .white__btn {
-        background-color: #fff;
-        color: #000;
-    }
+.btn {
+    font-weight: bold;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    border-radius: 20px;
+}
 
-    .black__btn {
-        background-color: #000;
-        color: #fff;
-    }
+.white__btn {
+    background-color: #fff;
+    color: #000;
+}
 
-    .box__1 h3, .box__1 h2{
-        color: #000;
-    }
+.black__btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.box__1 h3, .box__1 h2{
+    color: #000;
+}
 
 /* Scrollmenu */
 

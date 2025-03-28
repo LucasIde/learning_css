@@ -1,0 +1,80 @@
+::selection {
+    background:rgba(220, 20, 60, 0.473);
+  }
+  * {
+    box-sizing:border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Solway', serif;
+    background:beige;
+  }
+  .wrapper {
+    margin: auto;
+    max-width: 1200px;
+    background:#fff;
+    height: 700px;
+    display: grid;
+    gap: 10px; /* si utilise % avec VVV gtc VVV dépasse de ça case donc utilise fr(fraction)*/
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: 200px auto auto 200px; */
+    /* grid-template-columns: repeat(3, 1fr) 100px; */
+    /* grid-template-rows: 25% 50%; */
+    /* grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-template-areas: 
+    "header header header"
+    "main . sidebar"
+    "footer footer sidebar"; */
+    grid-template-columns: repeat(4, 1fr);
+    /* justify-items: end; */
+    /* align-items: stretch; */
+
+  }
+  .box {
+    /* height: 30px; */
+  }
+  .box:nth-of-type(1) {
+    background:crimson;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* ^^ fusion ^^ */
+    /* grid-column: 1/4; */
+    grid-column: 1/3; /*-1 fin de ligne*/
+    /* grid-area: header; */
+  }
+  .box:nth-of-type(2) {
+    background:skyblue;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    /*^^^ fusion ^^^*/
+    /* grid-area: 1/4/3/5; */
+    
+    /* grid-area: main; */
+  }
+  .box:nth-of-type(3) {
+    background:purple;
+    /* grid-area: sidebar; */
+  }
+  .box:nth-of-type(4) {
+    background:yellowgreen;
+    /* grid-area: footer; */
+  }
+  .box:nth-of-type(5) {
+    background:lightcoral;
+  }
+
+  .box:nth-of-type(6) {
+    background:palegoldenrod;
+  }
+  .box:nth-of-type(7) {
+    background:orangered;
+  }
+  .box:nth-of-type(8) {
+    background:violet;
+  }
+  .box:nth-of-type(9) {
+    background:darkblue;
+  }
+  .box:nth-of-type(10) {
+    background:lightgreen;
+  }

@@ -1,0 +1,75 @@
+/* Consignes */
+/*
+1- Créer un contexte de Grid sur .grid-container, comportant 6 colonnes égales ainsi qu'une gouttière de 1rem
+2- le premier article doit se placer :
+  - horizontalement entre la ligne 1 et la ligne 4
+  - verticalement entre la ligne 1 et la ligne 3
+3- l'article 5 doit se placer :
+  - horizontalement entre la ligne 4 et la dernière ligne de droite
+4- le dernier article doit se placer :
+  - horizontalement entre la ligne 1 et la dernière ligne de droite
+*/
+
+
+
+
+/* Reset */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 1rem;
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+article {
+  padding: 1rem;
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+article:nth-of-type(1) {
+  background: orange;
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+article:nth-of-type(2) {
+  background: hotpink;
+}
+article:nth-of-type(3) {
+  background: olivedrab;
+}
+article:nth-of-type(4) {
+  background: dodgerblue;
+}
+article:nth-of-type(5) {
+  background: slategray;
+  grid-column: 4 / -1;
+}
+article:nth-of-type(6) {
+  background: tan;
+  grid-column: 1/-1;
+}

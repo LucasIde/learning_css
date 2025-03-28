@@ -1,0 +1,107 @@
+/* Reset */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  width: 80%;
+  margin: 2rem auto;
+  background: #F1EFE2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #456;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+.container, footer {
+  color: #fff
+}
+
+.info, .content, .aside, footer {
+  padding: .4em;
+}
+
+.container {
+  background: #fff;
+}
+
+.info {
+  background: #6B9A49;
+}
+
+.content {
+  background: #645373
+}
+
+.aside {
+  background: #E69B00
+}
+
+footer {
+  background: hotpink;
+}
+
+
+/*
+
+OBJECTIF :
+Positionner les trois div .info, .content et .aside côte à côte sans toucher au HTML
+- la largeur de chaque bloc est de 1/3 du container
+- "footer" doit toujours se positionner en bas du bloc le plus haut quel qu'il soit
+
+TECHNIQUES :
+étape 1- en utilisant flexbox
+étape 2- en utilisant grid layout
+
+BONUS : appliquer une gouttière de 1em entre les blocs
+
+MAXIBONUS : changer l'ordre d'affichage : .content puis .info puis .aside
+
+*/
+
+/* ----------------------------- */
+/*   Version flexbox             */
+/* ----------------------------- */
+
+/* .container {
+    display: flex;
+    gap: 1em;
+    align-items: start;
+}
+
+.container > *{
+    flex-basis: calc((100% - 2em) / 3);
+}
+
+.content {
+    order: -1;
+} */
+
+/* ----------------------------- */
+/*   Version grid layout         */
+/* ----------------------------- */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    align-items: start;
+}
+
+.content {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
