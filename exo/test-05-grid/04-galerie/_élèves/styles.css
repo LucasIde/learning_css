@@ -34,15 +34,22 @@ body {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: stretch;
+  justify-items: stretch;
 }
 
 .grid-container > *{
-  align-self: stretch;
-  /* aspect-ratio: 1/1; */
-  /* place-self: stretch; */
-  /* justify-items: stretch; */
+  object-fit: cover;
+}
+
+.fit-right {
+  object-position: right;
+}
+
+.fit-left {
+  object-position: left;
 }
 
 .portrait {
-  /* grid-row: span 2; */
+  grid-row: span 2;
 }
