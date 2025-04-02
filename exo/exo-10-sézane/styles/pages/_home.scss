@@ -1,6 +1,64 @@
-
 nav {
 	height: 66px;
+	padding: 14px 0;
+	display: flex;
+	align-items: center;
+	@media screen and (min-width: 1025px) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		justify-content: center;
+		.nav_bar{
+			margin-left: 10%;
+			display: flex;
+		}
+		a{
+			color: #fff;
+		}
+		.logo {
+			order: -1;
+			margin: 0;
+		}
+		#logo-sezane {
+			fill: #fff;
+		}
+	}
+}
+
+.logo {
+	height: 38px;
+	order: 1;
+	margin: auto;
+	#logo-sezane {
+		height: 100%;
+	}
+}
+
+
+.menu_burger {
+	height: 1.4rem;
+	width: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	& > *{
+		height: 2px;
+		background-color: #121212;
+	}
+}
+
+.basket	{
+	order: 2;
+}
+
+#svg_nav_search, #svg_basket {
+	height: 1.5rem;
+}
+
+.mobile_nav:not(.nav_search) {
+	margin: 0 1.2rem;
 }
 
 .homepage__card {
@@ -33,6 +91,227 @@ h2{
 	font-size: 1.2rem;
 }
 
-.payement, .need__help, .about, .our_Location {
-	display: none;
+// |||footer||| 
+
+footer {
+	padding: 64px 0;
+	max-width: 1300px;
+	margin: auto;
+}
+
+// payement
+.payement {
+	display: flex;
+	justify-content: space-around;
+	border-top: solid 1px #E1E1E1;
+	border-bottom: solid 1px #E1E1E1;
+	padding: 1.5rem 0 3rem 0;
+	margin: 0 1.5rem;
+	gap: 1rem;
+	& > * {
+		width: calc(70% /3);
+	}
+	h3 {
+		text-align: center;
+	}
+	p {
+		font-size: 13px;
+		text-align: center;
+	}
+	a {
+		color: #000;
+	}
+}
+
+.footer__wrapper {
+	display: flex;
+	justify-content: space-around;
+	section:not(.subscribe) {
+		width: calc(60% /3);
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+	h4 {
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-family: "Baskervville", serif;
+		font-weight: 600;
+		line-height: 1.5rem;
+	}
+	a{
+		color: #555;
+		font-family: "Baskervville", serif;
+	}
+	p {
+		font-weight: bold;
+		font-size: 13px;
+		margin: 0;
+	}
+}
+// subscribe
+.subscribe {
+	width: 90%; //modif 90 en 25
+	a{
+		color: #000;
+		margin: 0;
+	}
+	h3 {
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
+	* {
+		margin-bottom: 2rem;
+	}
+	@media screen and (min-width:765px) {
+		width: 25%;
+		h3 {
+			font-size: 13px;
+			margin: 15px 0;
+		}
+	}
+}
+
+form{
+	display: flex;
+	[type="email"] {
+		width: calc(100% - 50px);
+		padding: 13px 10px;
+		margin: 0;
+	}
+	[type="submit"] {
+		width: 50px;
+		background-color: #000;
+		color: #fff;
+		border: none;
+		margin: 0;
+		cursor: pointer;
+	}
+}
+
+.footer__wrapper .icons {
+	display: flex;
+	justify-content: center; // space around no gap
+	gap: 3rem; 
+	padding: 0 2rem;
+	.icon {
+		margin: 0;
+		svg{
+			margin: 0;
+		}
+	}
+	@media screen and (min-width:765px) {
+		gap: 0;
+		justify-content: space-around;
+	}
+}
+
+.logo__footer {
+	#logo-sezane {
+		height: 56px;
+		margin: auto;
+	}
+	h5 {
+		font-family: "Baskervville", serif;
+		font-size: 11px;
+		text-align: center;
+	}
+	.certified{
+		display: flex;
+		justify-content: center;
+		gap: 1.8rem;
+		#logo-bcorp {
+			height: 54px;
+		}
+		#logo-societeamission {
+			height: 51px;
+		}
+	}
+}
+
+.access {
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+	z-index: 1;
+	height: 30px;
+	width: 30px;
+}
+// .subscribe {
+// 	width: 25%;
+// 	* {
+// 		margin-bottom: 2rem;
+// 	}
+// }
+
+// form{
+// 	display: flex;
+// 	[type="email"] {
+// 		width: 70%;
+// 		padding: 13px 10px;
+// 		margin: 0;
+// 	}
+// 	[type="submit"] {
+// 		width: 50px;
+// 		background-color: #000;
+// 		color: #fff;
+// 		border: none;
+// 		margin: 0;
+// 	}
+// }
+
+// .icons {
+// 	display: flex;
+// 	justify-content: space-around;
+// 	padding: 0 2rem;
+// 	.icon {
+// 		margin: 0;
+// 		svg{
+// 			margin: 0;
+// 		}
+// 	}
+// }
+
+// .logo__footer {
+// 	#logo-sezane {
+// 		height: 56px;
+// 		margin: auto;
+// 	}
+// 	h5 {
+// 		font-family: "Baskervville", serif;
+// 		font-size: 11px;
+// 		text-align: center;
+// 	}
+// 	.certified{
+// 		display: flex;
+// 		justify-content: center;
+// 		gap: 1.8rem;
+// 		#logo-bcorp {
+// 			height: 54px;
+// 		}
+// 		#logo-societeamission {
+// 			height: 51px;
+// 		}
+// 	}
+// }
+
+@media screen and (max-width:765px) {
+	.payement, .footer__wrapper .need__help, .footer__wrapper .about, .footer__wrapper .our_Location {
+		display: none;
+	}
+}
+
+@media screen and (min-width:1025px) {
+	.mobile_nav {
+		display: none;
+	}
+}
+
+@media screen and (max-width:1025px) {
+	.desktop_nav {
+		display: none;
+	}
 }
