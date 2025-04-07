@@ -4,26 +4,45 @@ nav {
 	display: flex;
 	align-items: center;
 	@media screen and (min-width: 1025px) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 1;
+		flex-direction: column;
+		height: 110px;
 		justify-content: center;
+		padding: 28px 0;
 		.nav_bar{
-			margin-left: 10%;
+			margin: 0 10%;
 			display: flex;
+			width: 80%;
+			justify-content: space-between;
 		}
 		a{
 			color: #fff;
+			text-transform: uppercase;
 		}
 		.logo {
+			height: 54px;
 			order: -1;
 			margin: 0;
 		}
 		#logo-sezane {
 			fill: #fff;
 		}
+	}
+	@media screen and (min-width: 1450px) {
+		flex-direction: row;
+		.nav_bar {
+			width: 40%;
+		}
+	}
+}
+
+
+.homepage_nav {
+	@media screen and (min-width: 1025px) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
 	}
 }
 
@@ -63,15 +82,32 @@ nav {
 
 .homepage__card {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(12, 1fr);
+	h2{
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		color: #fff;
+		width: 100%;
+	}
 }
 
 .card {
 	position: relative;
 }
 
+.card__small {
+	grid-column: span 6;
+	@media screen and (min-width:765px) {
+		grid-column: span 3;
+	}
+}
+
 .card__big	{
-	grid-column: span 2;
+	grid-column: span 12;
+	@media screen and (min-width:765px) {
+		grid-column: span 4;
+	}
 }
 
 img {
@@ -80,16 +116,7 @@ img {
 	object-fit: cover;
 }
 
-h2{
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-	color: #fff;
-	width: 100%;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-}
+
 
 // |||footer||| 
 
@@ -240,63 +267,6 @@ form{
 	height: 30px;
 	width: 30px;
 }
-// .subscribe {
-// 	width: 25%;
-// 	* {
-// 		margin-bottom: 2rem;
-// 	}
-// }
-
-// form{
-// 	display: flex;
-// 	[type="email"] {
-// 		width: 70%;
-// 		padding: 13px 10px;
-// 		margin: 0;
-// 	}
-// 	[type="submit"] {
-// 		width: 50px;
-// 		background-color: #000;
-// 		color: #fff;
-// 		border: none;
-// 		margin: 0;
-// 	}
-// }
-
-// .icons {
-// 	display: flex;
-// 	justify-content: space-around;
-// 	padding: 0 2rem;
-// 	.icon {
-// 		margin: 0;
-// 		svg{
-// 			margin: 0;
-// 		}
-// 	}
-// }
-
-// .logo__footer {
-// 	#logo-sezane {
-// 		height: 56px;
-// 		margin: auto;
-// 	}
-// 	h5 {
-// 		font-family: "Baskervville", serif;
-// 		font-size: 11px;
-// 		text-align: center;
-// 	}
-// 	.certified{
-// 		display: flex;
-// 		justify-content: center;
-// 		gap: 1.8rem;
-// 		#logo-bcorp {
-// 			height: 54px;
-// 		}
-// 		#logo-societeamission {
-// 			height: 51px;
-// 		}
-// 	}
-// }
 
 @media screen and (max-width:765px) {
 	.payement, .footer__wrapper .need__help, .footer__wrapper .about, .footer__wrapper .our_Location {
