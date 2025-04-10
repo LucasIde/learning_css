@@ -6,6 +6,9 @@
 		color: #232323;
 		font-size: .8rem;
 	}
+	a:hover{
+		text-decoration: underline;
+	}
 }
 
 .nav_header {
@@ -17,6 +20,12 @@
 	.logo_lost_kitchen {
 		width: 50%;
 		margin: auto;
+	}
+	a {
+		color: #232323;
+	}
+	ul > li:hover > a {
+		text-decoration: underline;
 	}
 	i {
 		font-size: 1.5rem;
@@ -80,10 +89,11 @@
 		padding: 16px 20px;
 		background-color: #fff;
 		border: solid 1px #000;
-		opacity: 0;
+		visibility: hidden;
+		transition: .3s all ease-in-out;
 	}
 	.nav:hover .subnav{
-		opacity: 1;
+		visibility: visible;
 	}
 	a {
 		color: #232323;
